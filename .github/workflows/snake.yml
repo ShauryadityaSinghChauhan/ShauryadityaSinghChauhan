@@ -2,8 +2,11 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # runs daily
+    - cron: "0 0 * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write   # ✅ THIS FIXES YOUR ERROR
 
 jobs:
   build:
@@ -16,10 +19,10 @@ jobs:
           github_user_name: ShauryadityaSinghChauhan
           outputs: |
             dist/github-contribution-grid-snake-dark.svg
-            dist/github-contribution-grid-snake.svg
 
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v3
+      - name: Push to branch
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          target_branch: output
-          build_dir: dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}   # ✅ REQUIRED
+          publish_dir: dist
+          publish_branch: output
