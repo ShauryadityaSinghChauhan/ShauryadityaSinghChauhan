@@ -5,7 +5,7 @@
   </a>
 </p>
 
-<h2> Hi, I'm Epic <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
+<h2> Hi, I'm Shaur <img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h2>
 
 I like building AI Agents and dev tools!
 
